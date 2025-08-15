@@ -1,0 +1,205 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #0056b3;
+}
+
+/* --- Encabezado y Pie de Página --- */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h1 {
+    color: #eee;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+/* --- Secciones de Contenido (Introducción, Requisitos) --- */
+.introduccion, .requisitos {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.requisitos ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.requisitos ul li {
+    margin-bottom: 5px;
+}
+
+.boton-inicio-admision {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.boton-inicio-admision:hover {
+    background-color: #218838;
+}
+
+/* --- Formulario de Admisión --- */
+.formulario-admision-container {
+    display: none;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-step input[type="text"],
+.form-step input[type="email"],
+.form-step input[type="tel"],
+.form-step input[type="date"],
+.form-step select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* --- Botones de Navegación del Formulario --- */
+.form-step button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-step .prev-step-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-right: 10px;
+}
+
+.form-step .prev-step-btn:hover {
+    background-color: #5a6268;
+}
+
+.form-step .next-step-btn,
+.form-step #submit-form-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-step .next-step-btn:hover,
+.form-step #submit-form-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Mensajes de Formulario --- */
+#mensaje-formulario {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+/* --- Estilos de Validación --- */
+input:invalid, select:invalid {
+    border-color: #dc3545;
+}
+
+input:valid, select:valid {
+    border-color: #28a745;
+}
+
+/* --- Estilos Específicos de los Nuevos Pasos --- */
+.documento-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.documento-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.documento-input input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#detalles-beca {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+#detalles-beca h4 {
+    margin-top: 0;
+    color: #0056b3;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Admisión - Universidad UNIC</title>
+    <link rel="stylesheet" href="css/admisionb.css">
+</head>
+<body>
+    <header>
+        <h1>PROCESO DE ADMISIÓN DE UNIVERSIDAD UNIC</h1>
+    </header>
+
+    <main>
+        <section class="introduccion">
+            <h2>¿QUÉ HAGO PARA INGRESAR A LA UNIVERSIDAD?</h2>
+            <p>Si ya concluiste tus estudios de bachillerato o estás por finalizarlo, seguramente hay una duda que te asalta: ¿qué hago para empezar mi carrera? No te preocupes, en este blog te explicamos paso a paso qué necesitas hacer para entrar a la universidad.</p>
+        </section>
+
+        <section class="requisitos">
+            <h2>REQUISITOS PARA INSCRIBIRME A UNIVERSIDAD UNIC</h2>
+            <h3>DOCUMENTACIÓN OBLIGATORIA</h3>
+            <p>Estos documentos tendrán que ser enviados digitalmente:</p>
+            <ul id="lista-requisitos">
+                <li>Cargando requisitos...</li>
+            </ul>
+
+            <button id="iniciar-admision-btn" class="boton-inicio-admision">Aplicar para Admisión</button>
+        </section>
+
+        <section id="form-admision-container" class="formulario-admision-container">
+            <h2>PROCESO DE ADMISIÓN - REGISTRO</h2>
+            <form id="form-admision-multistep">
+
+                <div class="form-step" id="step-1">
+                    <h3>Paso 1: Datos Personales</h3>
+                    <label for="nombre-aspirante">Nombre:</label>
+                    <input type="text" id="nombre-aspirante" name="nombre" required>
+
+                    <label for="apellido-aspirante">Apellido:</label>
+                    <input type="text" id="apellido-aspirante" name="apellido" required>
+
+                    <label for="genero-aspirante">Género:</label>
+                    <select id="genero-aspirante" name="genero" required>
+                        <option value="">Selecciona</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+
+                    <label for="fecha-nacimiento-aspirante">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento-aspirante" name="fechaNacimiento" required>
+
+                    <label for="email-aspirante">Email:</label>
+                    <input type="email" id="email-aspirante" name="email" required>
+
+                    <label for="telefono-aspirante">Teléfono (10 dígitos):</label>
+                    <input type="tel" id="telefono-aspirante" name="telefono" pattern="[0-9]{10}" maxlength="10" required>
+
+                    <button type="button" class="next-step-btn">Siguiente</button>
+                </div>
+
+                <div class="form-step" id="step-2">
+                    <h3>Paso 2: Solicitud de Admisión</h3>
+                    <label for="carrera-solicitud">Carrera de Interés:</label>
+                    <select id="carrera-solicitud" name="idCarrera" required>
+                        <option value="">Cargando Carreras...</option>
+                    </select>
+
+                    <label for="modalidad-solicitud">Modalidad:</label>
+                    <select id="modalidad-solicitud" name="idModalidad" required>
+                        <option value="">Cargando Modalidades...</option>
+                    </select>
+
+                    <button type="button" class="prev-step-btn">Anterior</button>
+                    <button type="button" class="next-step-btn">Siguiente</button>
+                </div>
+
+                <div class="form-step" id="step-3">
+                    <h3>Paso 3: Documentación</h3>
+                    <p>Sube los siguientes documentos en formato PDF:</p>
+                    <ul id="lista-documentos-subir">
+                        </ul>
+                    
+                    <div id="documentos-container">
+                        </div>
+                    
+                    <button type="button" class="prev-step-btn">Anterior</button>
+                    <button type="button" class="next-step-btn">Siguiente</button>
+                </div>
+
+                <div class="form-step" id="step-4">
+                    <h3>Paso 4: Solicitud de Beca</h3>
+                    <label for="beca-solicitud">¿Deseas solicitar alguna beca?</label>
+                    <select id="beca-solicitud" name="idBeca">
+                        <option value="">No solicito beca</option>
+                        </select>
+                    
+                    <div id="detalles-beca" style="margin-top: 20px; display: none;">
+                        <h4>Detalles de la beca:</h4>
+                        <p id="descripcion-beca"></p>
+                        <p><strong>Monto mensual:</strong> <span id="monto-mensual"></span></p>
+                        <p><strong>Monto anual:</strong> <span id="monto-anual"></span></p>
+                        <p><strong>Incluye reinscripción:</strong> <span id="incluye-reinscripcion"></span></p>
+                    </div>
+                    
+                    <button type="button" class="prev-step-btn">Anterior</button>
+                    <button type="submit" id="submit-form-btn">Finalizar Solicitud</button>
+                </div>
+
+                <p id="mensaje-formulario"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Universidad UNIC. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/admisiones.js"></script>
+</body>
+</html>
